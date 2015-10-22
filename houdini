@@ -1,1 +1,30 @@
 
+#I am trying to write a name generator for guests for our Houdini show. I believe the following code works, but now I have to figure out how to integrate it with an actual website.
+
+female = [ "Wilhelmina" , "Beatrice" , "Marie" , "Ruth" , "Dorothy" , "Cecilia" , "Daisy" , "Lila" , "Fay" ,
+"Sadie" , "Norma" , "Jane" ]
+
+male = [ "Gary" , "John" , "Theodore" , "Edward" , "Frank" , "Arthur" , "Fletcher" , "Martin", "George", "Victor", "Jack" , "Leo" ]
+
+last = ["Mansfield" , "Sweeney" , "Sylver" , "St. Claire" , "Parker" , "Butler", "Gilmore", "London", "Lee", "White" , "Mulholland" , "Valentine" , "Beck" , "Ford" , "Doyle" , "Weiss" , "O’Connor" , "Hinson" , "Rahner" , "Hardeen" , "Kavanaugh" , "Dietrich" , "Devine" ]
+
+job = ["magician and member of the Society of American Magicians" , "spirit guide" , "medium" , "spiritualist" ,
+"charlatan" , "scientist" , "author" , "mystery writer" , "poet" , "actor/actress" , "singer" , "musician" , "member of a vaudeville act" , "psychic" , "newspaper reporter" , "magazine editor" , "aviator" , "member of the Scientific American committee" , "science fiction writer" , "illusionist" , "magician’s assistant" , "starlet" , "makeup artist" , "gossip columnist" , "socialite" ]
+
+
+print "Would you like a male or female first name?"
+user_input = gets.chomp
+user_input.downcase!
+
+if user_input.include? "female"
+  my_first = female.sample
+  my_last = last.sample
+  my_job = job.sample
+  puts "Your name is #{my_first} #{my_last}, and you are a #{my_job}."
+else user_input.include? "male"
+  my_first = male.sample
+  my_last = last.sample
+  my_job = job.sample
+  puts "Your name is #{my_first} #{my_last}, and you are a #{my_job}."
+end
+
