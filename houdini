@@ -28,3 +28,4 @@ else user_input.include? "male"
   puts "Your name is #{my_first} #{my_last}, and you are a #{my_job}."
 end
 
+#still figuring this out
